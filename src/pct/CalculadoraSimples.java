@@ -20,38 +20,75 @@ public class CalculadoraSimples {
         //declaração e instancia do objeto de entrada
         Scanner entrada = new Scanner (System.in);
         
-        //apresentação
-        System.out.println("\n\t\t\t -- Calculadora Simples --\n");
         
-        //menu
-        System.out.println("[1].Soma");
-        System.out.println("[2].Sair");
-        
-        //leitura da opção do usúario
-        System.out.print("Escolha sua opção: ");
-        op = entrada.nextInt();
-        
+        do{
+            //apresentação
+            System.out.println("\n\t\t\t -- Calculadora Simples --\n");
+
+            //menu
+            System.out.println("[1].Soma");
+            System.out.println("[2].Subtração");
+            System.out.println("[3].Divisão");
+            System.out.println("[5].Sair");
+
+            //leitura da opção do usúario
+            System.out.print("Escolha sua opção: ");
+            op = entrada.nextInt();
+
             if (op == 1){
-      
-            System.out.println("\n\tSoma simples:\n");
-        
-            //entradas
-            System.out.print("Informe V1: ");
-            v1 = entrada.nextInt();
-        
-            System.out.print("Informe V2: ");
-            v2 = entrada.nextInt();
 
-            // processamento
-            total = v1 + v2;
+                System.out.println("\n\tSoma:\n");
 
-            //saída
-            //System.out.printf("\n %d + %d = %d\n\n", v1, v2, total);
-            System.out.println("\n" + v1 + " + " + v2 + " = " + total + "\n");
-    }else if (op == 2){
+                //entradas
+                System.out.print("Informe V1: ");
+                v1 = entrada.nextInt();
+
+                System.out.print("Informe V2: ");
+                v2 = entrada.nextInt();
+
+                // processamento
+                total = v1 + v2;
+
+                //saída
+                //System.out.printf("\n %d + %d = %d\n\n", v1, v2, total);
+                System.out.println("\n" + v1 + " + " + v2 + " = " + total + "\n");
+            }else if (op == 2){
+                //subtracao
+                System.out.println("\n\tSubtração:\n");
+
+                // entrada
+                System.out.print("Informe V1: ");
+                v1 = entrada.nextInt();
+
+                System.out.print("Informe V2: ");
+                v2 = entrada.nextInt();
+
+                // procesamento
+                total = v1 - v2;
+
+                // saída
+                    System.out.println("\n" + v1 + " - " + v2 + " = " + total + "\n");
+            }else if (op == 3){            
+                //divisão
+                System.out.println("\n\tDivisão:\n");
+
+                // entrada
+                System.out.print("Informe V1: ");
+                v1 = entrada.nextInt();
+
+                System.out.print("Informe V2: ");
+                v2 = entrada.nextInt();
+
+                // processamento
+                total = v1 / v2;
+
+                //saída
+                System.out.println("\n" + v1 + " / " + v2 + " = " + total + "\n");
+            }else if(op == 5){
                 System.out.println("Até breve!");
-    }else{
+            }else{
                 System.out.println("Opção " + op + " incorreta!");
-        }   
-    }        
-}    
+            }               
+        }while(op != 5);        
+    }
+}
