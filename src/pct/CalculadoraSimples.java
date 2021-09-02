@@ -15,6 +15,7 @@ public class CalculadoraSimples {
     public static void main(String[] args) {
         //declarando variaveis
         int v1, v2, total;
+        int op;
         
         //declaração e instancia do objeto de entrada
         Scanner entrada = new Scanner (System.in);
@@ -22,20 +23,35 @@ public class CalculadoraSimples {
         //apresentação
         System.out.println("\n\t\t\t -- Calculadora Simples --\n");
         
-        System.out.println("\n\tSoma simples:\n");
+        //menu
+        System.out.println("[1].Soma");
+        System.out.println("[2].Sair");
         
-        //entradas
-        System.out.print("Informe V1: ");
-        v1 = entrada.nextInt();
+        //leitura da opção do usúario
+        System.out.print("Escolha sua opção: ");
+        op = entrada.nextInt();
         
-        System.out.print("Informe V2: ");
-        v2 = entrada.nextInt();
+            if (op == 1){
+      
+            System.out.println("\n\tSoma simples:\n");
         
-        // processamento
-        total = v1 + v2;
+            //entradas
+            System.out.print("Informe V1: ");
+            v1 = entrada.nextInt();
         
-        //saída
-        //System.out.printf("\n %d + %d = %d\n\n", v1, v2, total);
-        System.out.println("\n" + v1 + " + " + v2 + " = " + total + "\n");
-    }
-}
+            System.out.print("Informe V2: ");
+            v2 = entrada.nextInt();
+
+            // processamento
+            total = v1 + v2;
+
+            //saída
+            //System.out.printf("\n %d + %d = %d\n\n", v1, v2, total);
+            System.out.println("\n" + v1 + " + " + v2 + " = " + total + "\n");
+    }else if (op == 2){
+                System.out.println("Até breve!");
+    }else{
+                System.out.println("Opção " + op + " incorreta!");
+        }   
+    }        
+}    
