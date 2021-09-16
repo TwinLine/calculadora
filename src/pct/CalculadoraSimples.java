@@ -29,6 +29,7 @@ public class CalculadoraSimples {
             System.out.println("[1].Soma");
             System.out.println("[2].Subtração");
             System.out.println("[3].Divisão");
+            System.out.println("[4].Multiplicação");
             System.out.println("[5].Sair");
 
             //leitura da opção do usúario
@@ -84,6 +85,25 @@ public class CalculadoraSimples {
 
                 //saída
                 System.out.println("\n" + v1 + " / " + v2 + " = " + total + "\n");
+            
+            }else if(op == 4){
+                //multiplicação
+                System.out.println("\n\tMultiplicação:\n");
+            
+                //entrada
+                // entrada
+                System.out.print("Informe V1: ");
+                v1 = entrada.nextInt();
+
+                System.out.print("Informe V2: ");
+                v2 = entrada.nextInt();
+
+                // processamento
+                total = v1 * v2;
+
+                //saída
+                System.out.println("\n" + v1 + " * " + v2 + " = " + total + "\n");
+            
             }else if(op == 5){
                 System.out.println("Até breve!");
             }else{
